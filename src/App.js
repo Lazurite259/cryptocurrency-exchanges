@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from "axios";
+import ExchangeList from './components/ExchangeList';
+import { useEffect, useState } from 'react';
 
 function App() {
+  /**
+   * Declare a new state variable "exchanges" and a function "setExchanges" to update it.
+   * Initialize exchanges = []
+   */
+  const [exchanges, setExchanges] = useState([]);
+
+  const getData = async () => {
+    try {
+      const dat = await axios.get("https://api.coingecko.com/api/v3/exchanges?per_page=10&page=1");
+      setExchanges(dat.data);
+      console.log(dat.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  // Do updates
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="App-header"><h2>First Ten Cryptocurrency Exchanges</h2></header>
+      <div className="App-table">
+        <ExchangeList exchanges={exchanges} />
+      </div>
     </div>
   );
 }
