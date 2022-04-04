@@ -9,7 +9,7 @@ const ExchangeList = ({ exchanges }) => {
             <thead>
                 <tr>
                     {titles.map((title, i) => (
-                        <td key={i}>{title}</td>
+                        <td key={i}><b>{title}</b></td>
                     ))}
                 </tr>
             </thead>
