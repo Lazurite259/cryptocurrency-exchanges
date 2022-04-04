@@ -1,7 +1,7 @@
 import React from "react";
 import ExchangeRow from "./ExchangeRow";
 
-const titles = ["Exchange", "Country", "Website", "Trust Rank"]
+const titles = ["Exchange", "Country", "Website", "Trust Rank"];
 
 const ExchangeList = ({ exchanges }) => {
     return (
