@@ -1,6 +1,10 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
+/**
+ * 
+ * @return A page with detailed information(country, trust rank, year of establishment, website, description) of the current exchange.
+ */
 function Exchange() {
     let navigate = useNavigate();
 
@@ -20,7 +24,7 @@ function Exchange() {
                     <p><b>Year of Establishment:</b> {exchange.state.year_established}</p>
                     <p><b>Website:</b> <a href={exchange.state.url}>{exchange.state.url}</a></p>
                     <p><b>Description:</b> {exchange.state.description}</p>
-                    <button type="button" onClick={() => { navigate("/") }}>Back to Main</button>
+                    <button className="btn btn-dark mt-5 ms-2 rounded" type="button" style={{ width: "150px" }} onClick={() => { navigate("/") }}>Back to Main</button>
                 </div>
             </div>
         </div>
