@@ -3,6 +3,10 @@ import ExchangeRow from "./ExchangeRow";
 
 const titles = ["Exchange", "Country", "Website", "Trust Rank"];
 
+/**
+ * 
+ * @return A list of the first ten exchanges with information of country, website, and trust rank.
+ */
 const ExchangeList = ({ exchanges }) => {
     return (
         <table className="table table-hover">

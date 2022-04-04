@@ -1,6 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * 
+ * @return The row with exchange's information of country, website, and trust rank. 
+ */
 const ExchangeRow = ({ exchange }) => {
     // Navigate to the exchange page
     let navigate = useNavigate();

@@ -3,6 +3,10 @@ import axios from "axios";
 import ExchangeList from './components/ExchangeList';
 import { useEffect, useState } from 'react';
 
+/**
+ * 
+ * @return The main page of this applicaiton.
+ */
 function App() {
   /**
    * Declare a new state variable "exchanges" and a function "setExchanges" to update it.
