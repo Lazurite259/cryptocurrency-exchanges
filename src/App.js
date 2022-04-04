@@ -1,7 +1,7 @@
 import './App.css';
 import axios from "axios";
 import ExchangeList from './components/ExchangeList';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 /**
  * 
@@ -18,7 +18,6 @@ function App() {
     try {
       const dat = await axios.get("https://api.coingecko.com/api/v3/exchanges?per_page=10&page=1");
       setExchanges(dat.data);
-      console.log(dat.data);
     } catch (error) {
       console.error(error);
     }
