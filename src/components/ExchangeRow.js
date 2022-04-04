@@ -1,8 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ExchangeRow = ({ exchange }) => {
+    // Navigate to the exchange page
+    let navigate = useNavigate();
+
     return (
-        <tr>
+        <tr onClick={() => { navigate(`/${exchange.id}`, { state: exchange }) }}>
             <td>
                 <img src={exchange.image} alt={exchange.name} className="rounded img-fluid mx-3" style={{ width: "10%" }} />
                 <span>{exchange.name}</span>
