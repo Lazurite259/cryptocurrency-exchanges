@@ -12,7 +12,7 @@ const ExchangeRow = ({ exchange }) => {
     return (
         <tr onClick={() => { navigate(`/${exchange.id}`, { state: exchange }) }}>
             <td>
-                <img src={exchange.image} alt={exchange.name} className="rounded img-fluid mx-3" style={{ width: "10%" }} />
+                <img src={exchange.image} alt={exchange.name} className="rounded img-fluid mx-3" style={{ width: "5%" }} />
                 <span>{exchange.name}</span>
             </td>
             <td>{exchange.country}</td>
