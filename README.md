@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### `npm run test`
 
-Launch the Cypress Test Runner.\
+Launch the Cypress Test Runner.
 
 ### `npm run build`
 
